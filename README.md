@@ -1,31 +1,15 @@
-# React Embed Gist
+Embed a gist from Github with React.
 
-[![NPM Downloads](https://img.shields.io/npm/dt/react-embed-gist.svg)](https://www.npmjs.com/package/react-embed-gist)
-[![GitHub license](https://img.shields.io/github/license/msaracevic/react-embed-gist.svg)](https://github.com/msaracevic/react-embed-gist/blob/master/LICENSE)
-[![GitHub last-commit](https://img.shields.io/github/last-commit/msaracevic/react-embed-gist.svg)](https://github.com/msaracevic/react-embed-gist/)
-[![GitHub issues-raw](https://img.shields.io/github/issues-raw/msaracevic/react-embed-gist.svg)](https://github.com/msaracevic/react-embed-gist/)
+Used and maintained by [Ptorx](https://ptorx.com) and other [Xyfir](https://www.xyfir.com) projects.
 
-Simple react component which can embed gist in your react application
+```tsx
+import { ReactGithubGist } from 'react-github-gist';
+import * as React from 'react';
 
-## How to use
-
-Just import as dependency in your file and pass gist as parameter, for example:
-
+<ReactGithubGist
+  // Gist to render
+  gist="GithubUser/GistIdentifier23a110196cc3ec113"
+  // Optionally render only a single file
+  file="file.md"
+/>;
 ```
-import ReactEmbedGist from 'react-embed-gist';
-
-// Only required attribute is gist
-<ReactEmbedGist gist="msaracevic/5d757e2fc72482a9a4a439969500c2eb"
-                wrapperClass="gist__bash"
-                loadingClass="loading__screen"
-                titleClass="gist__title"
-                file=".bash_profile.sh"/>
-```
-
-## Attributes
-
-* `gist` - gist you want to display, in a form of :USERNAME/:GIST_ID
-* `file` - *optional*, if you want to show just a single file from the gist, you can specify it here
-* `titleClass` - *optional*, if you want to pass your own class to `h2` title of the gist
-* `wrapperClass` - *optional*, if you want to pass your own class to `article` wrapping the gist
-* `loadingClass` - *optional*, if you want to pass your own class to `article` wrapper which is displayed during loading time
