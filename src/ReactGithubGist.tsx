@@ -13,24 +13,15 @@ export interface ReactGithubGistProps {
   file?: string;
 }
 
-export interface ReactGithubGistState {
-  content: string;
-}
+export function ReactGithubGist({ gist, file }: ReactGithubGistProps) {
+  const [content, setContent] = React.useState('');
 
-export class ReactGithubGist extends React.Component<
-  ReactGithubGistProps,
-  ReactGithubGistState
-> {
-  state: ReactGithubGistState = { content: '' };
-
-  componentDidMount() {
-    const { gist, file } = this.props;
+  // Load content
+  React.useEffect(() => {
     const id = `gist${gist.replace('/', '')}`;
 
     window[id] = (gist: { stylesheet: string; div: string }) => {
-      this.setState({
-        content: gist.div.replace(/href=/g, 'target="_blank" href=')
-      });
+      setContent(gist.div.replace(/href=/g, 'target="_blank" href='));
 
       if (document.head.innerHTML.indexOf(gist.stylesheet) === -1) {
         const stylesheet = document.createElement('link');
@@ -44,13 +35,11 @@ export class ReactGithubGist extends React.Component<
     };
 
     const script = document.createElement('script');
-    script.src = `https://gist.github.com/${
-      this.props.gist
-    }.json?callback=${id}${file ? `&file=${this.props.file}` : ''}`;
+    script.src = `https://gist.github.com/${gist}.json?callback=${id}${
+      file ? `&file=${file}` : ''
+    }`;
     document.head.appendChild(script);
-  }
+  }, [gist, file]);
 
-  render() {
-    return <div dangerouslySetInnerHTML={{ __html: this.state.content }} />;
-  }
+  return <div dangerouslySetInnerHTML={{ __html: content }} />;
 }
