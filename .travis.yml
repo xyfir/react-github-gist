@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- node
+script:
+- npm t
+- npm run build
+deploy:
+  - provider: releases
+    api_key:
+      secure: ZXBxq3s2JWjfPys7eRjwBJbUdadOX3kFwvEijsLA33kIJ9y1LTacgPTBFtJXvzXlVkgeGdGIxAiR1yj++3/ruuHK/Oxs0yIRg4+GD2fPCXHLDWqkJjR006p8Do/oKsBs4H+RNRw2gvPaT40sJKEF0ziY/GxCyFbrXLMDu7iIZpuwwJ7F1PD8Uve1MdpeVxTv47IWbrcAeN4f3Hq12bInqCRwlbd5Z1atmhyq8uN1736njK7sEwxH/vCdJnpHY7Sv7KlDiQ+HYSdxA0BRs6Iw6DVlubtGStqH6lR+3DqgkpaW6oJlZyPzZpDVDuXo4FiiFM67kBNEK/vZjASIw6Jf1VuCwbkAur0WkYVrYpYXVWvX4+jm8SntMVvkFHjZ/4yG63O/NqDj/zojhOw0aLSRLjh9aTGUVj5Dt/4AV9UBcH1k8O7uxd3RWC1+dl9cPHKksRvx02Vr0I+KLELO/BkgS0yf+KjXXN2eO65ozhkzxpouIctNxyZ7QQWep8dfP757l+cC+78CA/qpHSpl/izVvL3G4ng9vef3dSoM13r5Ss8f/Mtb+II1xQ0ksp0MdmvTcNCxFpieGK3aTICUZIWKtmGiWWstZofhWCKP1xTccrYbkh5fIF4S8Jq1CJWPcjbj9Z0vdP9DNJIhrG+aqXe/GzfTjSkx8j6s/agRYdkDajQ=
+    on:
+      repo: xyfir/react-github-gist
+      tags: true
+  - provider: npm
+    email: contact@xyfir.com
+    api_key:
+      secure: HGXN0+OrizuPw8t1mh6lURdGaSYOeFqKS14YfwbBC104jXskX5Smi08FZE/d3kjdgad6BMA7F0t6QCDfi8akC159GlDoWuU9xndH103INj582py3gujQUAhyVj3HRnLT0SSU024LGj93z3oe43dFru5ihqnWCpPEWWObPtT604AtG94RKhPjktPWp1G0KBRLO3jrYpa9Tb1s4RlnahhHpGungZEjZjxCy6kWBiWHM1h/HCrUd7/tBU1XTHgOQWDGFXd+6IRbEqn6EPkokLGyBVtVHmLsv8w3OGe9RGSZFUg56LjFxhrZASdNMm3hxXDTT0bDPivrS81MePZSA1KfRXvy0nXDIWf4rmZNNCjJluP089pca8mP5rLGsAcaO9lPoij28Z/UqHKs7xpKHySIx8YA3vuMhjuh5rm/fUbkuzxbJ0Oy1fOVHQCEOTqGuAFiFbYRPDEWdE9wS1rfgmKlRdOrWAWfBsFKeNTRSOQyUOILMVyyn6GqgDO2EGylggsz5Ik+JYqWZ8zqLDy0q6yDVNC1ibCLoGQBFMaqOJOgKGTklmb9AthCNzhoRjQT7ndkKIEjf+T28lReKp2tbMFbQk+uh8DPWrAr2Wt4ZjnmQHfzOb95e1jN7opl8+W1TEqc6SvoqVVoIem41o55DtNovXd2AflD0FMsIckAYbkF0Pg=
+    on:
+      repo: xyfir/react-github-gist
+      tags: true
