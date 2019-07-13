@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "newLine": "LF",
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "jsx": "react"
+  }
+}
