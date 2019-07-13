@@ -23,7 +23,7 @@ export function ReactGithubGist({ gist, file }: ReactGithubGistProps) {
     window[id] = (gist: { stylesheet: string; div: string }) => {
       setContent(gist.div.replace(/href=/g, 'target="_blank" href='));
 
-      if (document.head.innerHTML.indexOf(gist.stylesheet) === -1) {
+      if (!document.head.innerHTML.includes(gist.stylesheet)) {
         const stylesheet = document.createElement('link');
         stylesheet.href = gist.stylesheet;
         stylesheet.type = 'text/css';
