@@ -1,10 +1,15 @@
 Embed a gist from Github with React.
 
-Used and maintained by [Ptorx](https://ptorx.com) and other [Xyfir](https://www.xyfir.com) projects.
+Used by **[illuminsight](https://www.illuminsight.com)**, **[Ptorx](https://ptorx.com)** and other **[Xyfir](https://www.xyfir.com)** projects.
+
+[![npm version](https://badge.fury.io/js/react-github-gist.svg)](https://badge.fury.io/js/react-github-gist)
+[![Build Status](https://travis-ci.org/xyfir/react-github-gist.svg?branch=master)](https://travis-ci.org/xyfir/react-github-gist)
+
+Due to its simplicity, this project should not need frequent updates.
 
 ```tsx
 import { ReactGithubGist } from 'react-github-gist';
-import * as React from 'react';
+import React from 'react';
 
 <ReactGithubGist
   // Gist to render
