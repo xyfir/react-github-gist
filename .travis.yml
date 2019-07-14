@@ -3,6 +3,7 @@ node_js:
 - node
 script:
 - npm t
+- export NODE_ENV=production
 - npm run build
 deploy:
   - provider: releases
