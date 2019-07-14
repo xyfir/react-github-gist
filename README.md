@@ -11,10 +11,12 @@ Due to its simplicity, this project should not need frequent updates.
 import { ReactGithubGist } from 'react-github-gist';
 import React from 'react';
 
-<ReactGithubGist
-  // Gist to render
-  gist="GithubUser/GistIdentifier23a110196cc3ec113"
-  // Optionally render only a single file
-  file="file.md"
-/>;
+const Gist = () => (
+  <ReactGithubGist
+    // Gist to render
+    gist="GithubUser/GistIdentifier23a110196cc3ec113"
+    // Optionally render only a single file
+    file="file.md"
+  />
+);
 ```
