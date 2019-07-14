@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org).
 
 ## [Unreleased]
 
+## [2.0.1] - 2019-07-14
+
+### Fixed
+
+- Travis CI's npm publishing
+
 ## [2.0.0] - 2019-07-13
 
 ### Added
@@ -24,6 +30,7 @@ This project adheres to [Semantic Versioning](https://semver.org).
 
 - Everything
 
-[unreleased]: https://github.com/Xyfir/react-github-gist/compare/2.0.0...HEAD
+[unreleased]: https://github.com/Xyfir/react-github-gist/compare/2.0.1...HEAD
+[2.0.1]: https://github.com/Xyfir/react-github-gist/releases/tag/2.0.1
 [2.0.0]: https://github.com/Xyfir/react-github-gist/releases/tag/2.0.0
 [1.0.0]: https://github.com/Xyfir/react-github-gist/releases/tag/1.0.0

@@ -1,6 +1,6 @@
 {
   "name": "react-github-gist",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Embed a gist from Github with React.",
   "types": "dist/ReactGithubGist.d.ts",
   "main": "dist/ReactGithubGist.js",
